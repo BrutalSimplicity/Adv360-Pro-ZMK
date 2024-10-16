@@ -161,11 +161,11 @@
 
         symbol {
             bindings = <
-&trans  &trans  &trans  &trans  &trans  &trans  &trans                                      &trans  &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans  &trans                                      &trans  &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans      &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans                  &trans      &trans                  &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans          &trans  &trans  &trans      &trans  &trans  &trans          &trans  &trans  &trans  &trans  &trans
+&none  &none     &none     &none      &none     &none  &none                                  &none  &none  &none      &none      &none      &none     &none
+&none  &kp LBRC  &kp LPAR  &kp RPAR   &kp RBRC  &none  &none                                  &none  &none  &none      &none      &none      &none     &none
+&none  &none     &none     &kp EQUAL  &none     &none  &none  &none  &none      &none  &none  &none  &none  &none      &kp TAB    &kp SPACE  &kp RET   &none
+&none  &none     &none     &kp MINUS  &none     &none                &none      &none                &none  &none      &none      &none      &none     &none
+&none  &none     &none     &none      &none            &none  &none  &none      &none  &none  &none         &kp LSHFT  &kp LCTRL  &kp LALT   &kp LALT  &none
             >;
         };
 
