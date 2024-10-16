@@ -28,6 +28,109 @@
             flavor = "tap-preferred";
             bindings = <&kp>, <&kp>;
         };
+
+        lhmi: left_homerow_mod_index_finger {
+            compatible = "zmk,behavior-hold-tap";
+            #binding-cells = <2>;
+            flavor = "balanced";
+            tapping-term-ms = <170>;
+            quick-tap-ms = <170>;
+            bindings = <&kp>, <&kp>;
+
+            hold-trigger-key-positions = <RIGHT_HAND_KEYS THUMB_KEYS>;
+        };
+
+        lhmm: left_homerow_mod_middle_finger {
+            compatible = "zmk,behavior-hold-tap";
+            #binding-cells = <2>;
+            flavor = "tap-preferred";
+            tapping-term-ms = <200>;
+            quick-tap-ms = <200>;
+            require-prior-idle-ms = <125>;
+            bindings = <&kp>, <&kp>;
+
+            hold-trigger-key-positions = <RIGHT_HAND_KEYS THUMB_KEYS>;
+        };
+
+        lhmr: left_homerow_mod_ring_finger {
+            compatible = "zmk,behavior-hold-tap";
+            #binding-cells = <2>;
+            flavor = "tap-preferred";
+            tapping-term-ms = <200>;
+            quick-tap-ms = <200>;
+            require-prior-idle-ms = <125>;
+            bindings = <&kp>, <&kp>;
+
+            hold-trigger-key-positions = <RIGHT_HAND_KEYS THUMB_KEYS>;
+        };
+
+        lhmp: left_homerow_mod_pinky_finger {
+            compatible = "zmk,behavior-hold-tap";
+            #binding-cells = <2>;
+            flavor = "tap-preferred";
+            tapping-term-ms = <200>;
+            quick-tap-ms = <200>;
+            require-prior-idle-ms = <125>;
+            bindings = <&kp>, <&kp>;
+
+            hold-trigger-key-positions = <RIGHT_HAND_KEYS THUMB_KEYS>;
+        };
+
+        rhmi: right_homerow_mod_index_finger {
+            compatible = "zmk,behavior-hold-tap";
+            #binding-cells = <2>;
+            flavor = "balanced";
+            tapping-term-ms = <170>;
+            quick-tap-ms = <170>;
+            bindings = <&kp>, <&kp>;
+
+            hold-trigger-key-positions = <LEFT_HAND_KEYS THUMB_KEYS>;
+        };
+
+        rhmm: right_homerow_mod_middle_finger {
+            compatible = "zmk,behavior-hold-tap";
+            #binding-cells = <2>;
+            flavor = "tap-preferred";
+            tapping-term-ms = <200>;
+            quick-tap-ms = <200>;
+            require-prior-idle-ms = <125>;
+            bindings = <&kp>, <&kp>;
+
+            hold-trigger-key-positions = <LEFT_HAND_KEYS THUMB_KEYS>;
+        };
+
+        rhmr: right_homerow_mod_ring_finger {
+            compatible = "zmk,behavior-hold-tap";
+            #binding-cells = <2>;
+            flavor = "tap-preferred";
+            tapping-term-ms = <200>;
+            quick-tap-ms = <200>;
+            require-prior-idle-ms = <125>;
+            bindings = <&kp>, <&kp>;
+
+            hold-trigger-key-positions = <LEFT_HAND_KEYS THUMB_KEYS>;
+        };
+
+        rhmp: right_homerow_mod_pinky_finger {
+            compatible = "zmk,behavior-hold-tap";
+            #binding-cells = <2>;
+            flavor = "tap-preferred";
+            tapping-term-ms = <200>;
+            quick-tap-ms = <200>;
+            require-prior-idle-ms = <125>;
+            bindings = <&kp>, <&kp>;
+
+            hold-trigger-key-positions = <LEFT_HAND_KEYS THUMB_KEYS>;
+        };
+
+        bspc: backspace_delete {
+            compatible = "zmk,behavior-mod-morph";
+            label = "BACKSPACE_DELETE";
+            bindings = <&kp BACKSPACE>, <&kp DELETE>;
+
+            #binding-cells = <0>;
+            mods = <(MOD_LSFT|MOD_RSFT)>;
+        };
     };
 
     macros {
