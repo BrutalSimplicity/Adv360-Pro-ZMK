@@ -37,7 +37,7 @@
             quick-tap-ms = <170>;
             bindings = <&kp>, <&kp>;
 
-            hold-trigger-key-positions = <RIGHT_HAND_KEYS THUMB_KEYS>;
+            hold-trigger-key-positions = <RIGHT_HAND_KEYS THUMB_KEYS 22 23 24 25 26 27 40 41 42 43 44 45 54 55 56 57 58 59 71 72 73 74 75 8 9 10 11 12 13 22 23 24 25 26 27 40 41 42 43 44 45 54 55 56 57 58 59 71 72 73 74 75 7 8 9 10 11 12 13 21 22 23 24 25 26 27 38 39 40 41 42 43 44 45 54 55 56 57 58 59 69 70 71 72 73 74 75 37 38 53 68 69 70 35 36 37 38 52 53 65 66 67 68 69 70 71>;
         };
 
         lhmm: left_homerow_mod_middle_finger {
@@ -49,7 +49,7 @@
             require-prior-idle-ms = <125>;
             bindings = <&kp>, <&kp>;
 
-            hold-trigger-key-positions = <RIGHT_HAND_KEYS THUMB_KEYS>;
+            hold-trigger-key-positions = <RIGHT_HAND_KEYS THUMB_KEYS 35 36 37 38 52 53 65 66 67 68 69 70 71 72 73 74 75 7 8 9 10 11 12 13 21 22 23 24 25 26 27 38 39 40 41 42 43 44 45 54 55 56 57 58 59 69 70 71 72 73 74 75>;
         };
 
         lhmr: left_homerow_mod_ring_finger {
@@ -61,7 +61,7 @@
             require-prior-idle-ms = <125>;
             bindings = <&kp>, <&kp>;
 
-            hold-trigger-key-positions = <RIGHT_HAND_KEYS THUMB_KEYS>;
+            hold-trigger-key-positions = <RIGHT_HAND_KEYS THUMB_KEYS 35 36 37 38 52 53 65 66 67 68 69 70 71 72 73 74 75 7 8 9 10 11 12 13 21 22 23 24 25 26 27 38 39 40 41 42 43 44 45 54 55 56 57 58 59 69 70 71 72 73 74 75>;
         };
 
         lhmp: left_homerow_mod_pinky_finger {
@@ -73,7 +73,7 @@
             require-prior-idle-ms = <125>;
             bindings = <&kp>, <&kp>;
 
-            hold-trigger-key-positions = <RIGHT_HAND_KEYS THUMB_KEYS>;
+            hold-trigger-key-positions = <RIGHT_HAND_KEYS THUMB_KEYS 35 36 37 38 52 53 65 66 67 68 69 70 7 8 9 10 11 12 13 21 22 23 24 25 26 27 38 39 40 41 42 43 44 45 54 55 56 57 58 59 68 69 70 71 72 73 74 75>;
         };
 
         rhmi: right_homerow_mod_index_finger {
@@ -84,7 +84,7 @@
             quick-tap-ms = <170>;
             bindings = <&kp>, <&kp>;
 
-            hold-trigger-key-positions = <LEFT_HAND_KEYS THUMB_KEYS>;
+            hold-trigger-key-positions = <LEFT_HAND_KEYS THUMB_KEYS 35 36 37 38 52 53 65 66 67 68 69 70 0 1 2 3 4 5 6 14 15 16 17 18 19 20 28 29 30 31 32 33 34 35 46 47 48 49 50 51 52 60 61 62 63 64 65 66 67>;
         };
 
         rhmm: right_homerow_mod_middle_finger {
@@ -96,7 +96,7 @@
             require-prior-idle-ms = <125>;
             bindings = <&kp>, <&kp>;
 
-            hold-trigger-key-positions = <LEFT_HAND_KEYS THUMB_KEYS>;
+            hold-trigger-key-positions = <LEFT_HAND_KEYS THUMB_KEYS 35 36 37 38 52 53 63 64 65 66 69 70 35 36 37 38 52 53 63 64 65 66 67 68 69 70 70 0 1 2 3 4 5 6 14 15 16 17 18 19 20 28 29 30 31 32 33 34 35 46 47 48 49 50 51 60 61 62 63 64 65 66>;
         };
 
         rhmr: right_homerow_mod_ring_finger {
@@ -108,7 +108,7 @@
             require-prior-idle-ms = <125>;
             bindings = <&kp>, <&kp>;
 
-            hold-trigger-key-positions = <LEFT_HAND_KEYS THUMB_KEYS>;
+            hold-trigger-key-positions = <LEFT_HAND_KEYS THUMB_KEYS 35 36 37 38 52 53 65 66 67 68 69 70 0 1 2 3 4 5 6 14 15 16 17 18 19 20 28 29 30 31 32 33 34 35 36 37 38 46 47 48 49 50 51 52 53 60 61 62 63 64 65 66 67 68>;
         };
 
         rhmp: right_homerow_mod_pinky_finger {
@@ -120,7 +120,7 @@
             require-prior-idle-ms = <125>;
             bindings = <&kp>, <&kp>;
 
-            hold-trigger-key-positions = <LEFT_HAND_KEYS THUMB_KEYS>;
+            hold-trigger-key-positions = <LEFT_HAND_KEYS THUMB_KEYS 35 36 37 38 52 53 65 66 67 68 69 70 0 1 2 3 4 5 6 14 15 16 17 18 19 20 28 29 30 31 32 33 34 35 46 47 48 49 50 51 52 60 61 62 63 64 65 66 67>;
         };
 
         bspc: backspace_delete {
