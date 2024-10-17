@@ -17,6 +17,13 @@
             bindings = <&kp RET>;
         };
 
+        select_line: select_line {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp HOME &kp LS(END)>;
+            label = "SELECT_LINE";
+        };
+
         #endif
 
         hm: homerow_mods {
@@ -168,11 +175,11 @@
 
         default_layer {
             bindings = <
-&none             &kp N1        &kp N2        &kp N3         &kp N4         &kp N5  &mo 3                                                                     &mo 3              &kp N6  &kp N7         &kp N8         &kp N9        &kp N0           &none
+&none             &kp N1        &kp N2        &kp N3         &kp N4         &kp N5  &mo 4                                                                     &mo 4              &kp N6  &kp N7         &kp N8         &kp N9        &kp N0           &none
 &kp TAB           &kp Q         &kp W         &kp E          &kp R          &kp T   &none                                                                     &none              &kp Y   &kp U          &kp I          &kp O         &kp P            &multi_caps
 &kp ESC           &lhmp LGUI A  &lhmr LALT S  &lhmm LCTRL D  &lhmi LSHFT F  &kp G   &kp LC(LA(LSHFT))  &kp LGUI   &none          &none      &kp RGUI          &kp LA(LC(LSHFT))  &kp H   &rhmi RSHFT J  &rhmm RCTRL K  &rhmr RALT L  &rhmp RGUI SEMI  &kp SQT
 &kp LSHFT         &kp Z         &kp X         &kp C          &kp V          &kp B                                 &kp LALT       &kp RALT                                        &kp N   &kp M          &kp COMMA      &kp DOT       &kp FSLH         &kp RSHFT
-&kp LA(LC(LGUI))  &kp HOME      &kp PG_UP     &kp PG_DN      &kp END                &kp ESC            &kp ENTER  &kp LCTRL      &kp RCTRL  &bspc_cursor 2 0  &sym_tap 1 SPACE           &kp LBKT       &kp LPAR       &kp RPAR      &kp RBKT         &kp LA(LC(LGUI))
+&kp LA(LC(LGUI))  &kp HOME      &kp PG_UP     &kp PG_DN      &kp END                &kp ESC            &kp ENTER  &kp LCTRL      &kp RCTRL  &bspc_cursor 3 0  &sym_tap 1 SPACE           &kp LBKT       &kp LPAR       &kp RPAR      &kp RBKT         &kp LA(LC(LGUI))
             >;
         };
 
@@ -183,6 +190,16 @@
 &kp GRAVE  &kp PIPE   &kp ASTRK  &kp EQUAL  &kp UNDER  &kp AMPS   &none    &kp PRCNT  &none          &none  &none  &none  &kp QMARK  &kp BSPC   &kp TAB    &kp SPACE    &kp RET   &none
 &kp DOT    &kp LT     &kp TILDE  &kp MINUS  &kp GT     &kp SLASH                      &kp COLON      &none                &kp SEMI   &kp COLON  &kp COMMA  &kp LS(TAB)  &none     &none
 &none      &none      &kp LBKT   &kp RBKT   &kp PLUS              &kp SQT  &kp DQT    &kp QMARK      &none  &none  &none             &kp LSHFT  &kp LCTRL  &kp LALT     &kp LGUI  &none
+            >;
+        };
+
+        number {
+            bindings = <
+&none         &kp HOME       &kp PG_UP      &kp PG_DN  &kp END        &none      &kp LS(LG(N5))                                               &none            &kp CARET  &kp LPAR   &kp LBKT   &kp RBKT  &kp RPAR   &none
+&select_line  &kp LG(MINUS)  &kp LS(LG(Z))  &kp LG(Z)  &kp LG(PLUS)   &kp LG(X)  &kp LS(LG(NUMBER_4))                                         &none            &kp STAR   &kp N7     &kp N8     &kp N9    &kp MINUS  &none
+&kp LG(A)     &kp ENTER      &kp LA(LEFT)   &kp UP     &kp LA(RIGHT)  &kp LG(C)  &kp LG(LC(LS(N4)))    &none  &none      &none      &kp LGUI  &none            &kp EQUAL  &kp N4     &kp N5     &kp N6    &kp PLUS   &kp DQT
+&none         &none          &kp LEFT       &kp DOWN   &kp RIGHT      &kp LG(V)                               &none      &kp LALT                              &kp N0     &kp N1     &kp N2     &kp N3    &kp SLASH  &kp UNDER
+&none         &kp LGUI       &kp LALT       &kp LCTRL  &kp LSHFT                 &none                 &none  &none      &kp LCTRL  &kp BSPC  &mt LSHFT SPACE             &kp COLON  &kp COMMA  &kp DOT   &none      &none
             >;
         };
 
@@ -203,16 +220,6 @@
 &none  &none         &none         &none         &none         &none         &none        &none  &none      &bt BT_CLR  &none       &rgb_ug RGB_MEFS_CMD 5  &none  &none       &none       &none  &none  &none
 &none  &none         &none         &none         &macro_ver    &none                             &none      &none                                           &none  &none       &none       &none  &none  &none
 &none  &none         &none         &none         &none                       &none        &none  &none      &none       &bl BL_TOG  &rgb_ug RGB_TOG                &bl BL_INC  &bl BL_DEC  &none  &none  &none
-            >;
-        };
-
-        number {
-            bindings = <
-&none  &none      &none         &none     &none          &none  &none                                  &none  &kp CARET  &kp LPAR   &kp LBKT   &kp RBKT  &kp RPAR   &none
-&none  &none      &none         &none     &none          &none  &none                                  &none  &kp STAR   &kp N7     &kp N8     &kp N9    &kp MINUS  &none
-&none  &kp ENTER  &kp LA(LEFT)  &kp UP    &kp LA(RIGHT)  &none  &none  &none  &none      &none  &none  &none  &kp EQUAL  &kp N4     &kp N5     &kp N6    &kp PLUS   &kp DQT
-&none  &none      &kp LEFT      &kp DOWN  &kp RIGHT      &none                &none      &none                &kp N0     &kp N1     &kp N2     &kp N3    &kp SLASH  &none
-&none  &none      &none         &none     &none                 &none  &none  &none      &none  &none  &none             &kp COLON  &kp COMMA  &kp DOT   &none      &none
             >;
         };
     };
