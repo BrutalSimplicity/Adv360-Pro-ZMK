@@ -179,17 +179,17 @@
 &kp TAB           &kp Q         &kp W         &kp E          &kp R          &kp T   &none                                                             &none              &kp Y   &kp U          &kp I          &kp O         &kp P            &multi_caps
 &kp ESC           &lhmp LGUI A  &lhmr LALT S  &lhmm LCTRL D  &lhmi LSHFT F  &kp G   &kp LC(LA(LSHFT))  &kp LGUI   &none          &none      &kp RGUI  &kp LA(LC(LSHFT))  &kp H   &rhmi RSHFT J  &rhmm RCTRL K  &rhmr RALT L  &rhmp RGUI SEMI  &kp SQT
 &kp LSHFT         &kp Z         &kp X         &kp C          &kp V          &kp B                                 &kp LALT       &kp RALT                                &kp N   &kp M          &kp COMMA      &kp DOT       &kp FSLH         &kp RSHFT
-&kp LA(LC(LGUI))  &kp HOME      &kp PG_UP     &kp PG_DN      &kp END                &lt 2 ESC          &kp ENTER  &kp LCTRL      &kp RCTRL  &bspc     &sym_tap 1 SPACE           &kp LBKT       &kp LPAR       &kp RPAR      &kp RBKT         &kp LA(LC(LGUI))
+&kp LA(LC(LGUI))  &kp HOME      &kp PG_UP     &kp PG_DN      &kp END                &lt 2 ESC          &kp ENTER  &kp LCTRL      &kp RCTRL  &bspc     &sym_tap 1 SPACE           &kp LPAR       &kp LBKT       &kp RBKT      &kp RPAR         &kp LA(LC(LGUI))
             >;
         };
 
         symbol {
             bindings = <
-&none      &kp CARET  &kp AT     &kp HASH   &kp DLLR   &kp PRCNT  &none                                            &none  &none      &none      &none      &none        &none     &none
-&kp EXCL   &kp LBRC   &kp LPAR   &kp RPAR   &kp RBRC   &kp BSLH   &none                                            &none  &none      &none      &none      &none        &none     &none
-&kp GRAVE  &kp PIPE   &kp ASTRK  &kp EQUAL  &kp UNDER  &kp AMPS   &none    &kp PRCNT  &none          &none  &none  &none  &kp QMARK  &kp BSPC   &kp TAB    &kp SPACE    &kp RET   &none
-&kp DOT    &kp LT     &kp TILDE  &kp MINUS  &kp GT     &kp SLASH                      &kp COLON      &none                &kp SEMI   &kp COLON  &kp COMMA  &kp LS(TAB)  &none     &none
-&none      &none      &kp LBKT   &kp RBKT   &kp PLUS              &kp SQT  &kp DQT    &kp QMARK      &none  &none  &none             &kp LSHFT  &kp LCTRL  &kp LALT     &kp LGUI  &none
+&none      &kp CARET  &kp AT     &kp HASH   &kp DLLR   &kp PRCNT  &none                                            &none  &none      &none      &none        &none      &none     &none
+&kp EXCL   &kp LBRC   &kp LPAR   &kp RPAR   &kp RBRC   &kp BSLH   &none                                            &none  &none      &none      &kp LS(TAB)  &none      &none     &none
+&kp GRAVE  &kp PIPE   &kp ASTRK  &kp EQUAL  &kp UNDER  &kp AMPS   &none    &kp PRCNT  &none          &none  &none  &none  &kp QMARK  &kp BSPC   &kp TAB      &kp SPACE  &kp RET   &none
+&none      &kp LT     &kp TILDE  &kp MINUS  &kp GT     &kp SLASH                      &kp COLON      &none                &kp SEMI   &kp COLON  &kp COMMA    &kp DOT    &none     &none
+&none      &none      &kp LBKT   &kp RBKT   &kp PLUS              &kp SQT  &kp DQT    &kp QMARK      &none  &none  &none             &kp LSHFT  &kp LCTRL    &kp LALT   &kp LGUI  &none
             >;
         };
 
