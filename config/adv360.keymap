@@ -6,7 +6,7 @@
 
 / {
     behaviors {
-      #include "macros.dtsi"
+        #include "macros.dtsi"
       #include "version.dtsi"
       #ifndef VERSION_MACRO
 
@@ -167,6 +167,9 @@
         };
     };
 
+    macros {
+    };
+
     keymap {
         compatible = "zmk,keymap";
 
@@ -182,11 +185,11 @@
 
         symbol {
             bindings = <
-&none      &kp CARET  &kp AT     &kp HASH   &kp DLLR   &kp PRCNT  &none                                            &none  &none      &none      &none        &none      &none     &none
-&kp EXCL   &kp LBRC   &kp LPAR   &kp RPAR   &kp RBRC   &kp BSLH   &none                                            &none  &none      &none      &kp LS(TAB)  &none      &none     &none
-&kp GRAVE  &kp PIPE   &kp ASTRK  &kp EQUAL  &kp UNDER  &kp AMPS   &none    &kp PRCNT  &none          &none  &none  &none  &kp QMARK  &kp BSPC   &kp TAB      &kp SPACE  &kp RET   &none
-&none      &kp LT     &kp TILDE  &kp MINUS  &kp GT     &kp SLASH                      &kp COLON      &none                &kp SEMI   &kp COLON  &kp COMMA    &kp DOT    &none     &none
-&none      &none      &kp LBKT   &kp RBKT   &kp PLUS              &kp SQT  &kp DQT    &kp QMARK      &none  &none  &none             &kp LSHFT  &kp LCTRL    &kp LALT   &kp LGUI  &none
+&none      &kp CARET  &kp AT     &kp HASH   &kp DLLR   &kp PRCNT  &none                                              &none  &none      &none      &none        &none      &none     &none
+&kp EXCL   &kp LBRC   &kp LPAR   &kp RPAR   &kp RBRC   &kp BSLH   &none                                              &none  &none      &none      &kp LS(TAB)  &none      &none     &none
+&kp GRAVE  &kp PIPE   &kp SQT    &kp DQT    &kp UNDER  &kp AMPS   &none      &kp PRCNT  &none          &none  &none  &none  &kp QMARK  &kp BSPC   &kp TAB      &kp SPACE  &kp RET   &none
+&none      &kp LT     &kp TILDE  &kp MINUS  &kp GT     &kp SLASH                        &kp COLON      &none                &kp SEMI   &kp COLON  &kp COMMA    &kp DOT    &none     &none
+&none      &none      &kp LBKT   &kp RBKT   &kp PLUS              &kp EQUAL  &kp STAR   &kp QMARK      &none  &none  &none             &kp LSHFT  &kp LCTRL    &kp LALT   &kp LGUI  &none
             >;
         };
 
