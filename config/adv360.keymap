@@ -159,7 +159,13 @@
         next_win: next_win {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&kp LGUI &kp TAB>, <&macro_wait_time 200>;
+            bindings =
+                <&kp LGUI>,
+                <&macro_press>,
+                <&kp TAB>,
+                <&macro_tap>,
+                <&kp LGUI &kp TAB>,
+                <&macro_release>;
 
             label = "NEXT_WIN";
         };
