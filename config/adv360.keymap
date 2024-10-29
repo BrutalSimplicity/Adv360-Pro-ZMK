@@ -193,8 +193,8 @@
             bindings = <
 &none                   &kp N1        &kp N2        &kp N3         &kp N4         &kp N5  &mo 4                                                            &mo 4              &kp N6  &kp N7         &kp N8         &kp N9        &kp N0           &none
 &kp TAB                 &kp Q         &kp W         &kp E          &kp R          &kp T   &none                                                            &none              &kp Y   &kp U          &kp I          &kp O         &kp P            &kp CAPS
-&kp ESC                 &lhmp LGUI A  &lhmr LALT S  &lhmm LCTRL D  &lhmi LSHFT F  &kp G   &kp LC(LA(LSHFT))  &kp LGUI  &kp GLOBE      &kp GLOBE  &kp RGUI  &kp LA(LC(LSHFT))  &kp H   &rhmi RSHFT J  &rhmm RCTRL K  &rhmr RALT L  &rhmp RGUI SEMI  &kp SQT
-&multi_caps LSHFT 0     &kp Z         &kp X         &kp C          &kp V          &kp B                                &kp LALT       &kp RALT                                &kp N   &kp M          &kp COMMA      &kp DOT       &kp FSLH         &multi_caps RSHFT 0
+&kp ESC                 &lhmp LGUI A  &lhmr LALT S  &lhmm LCTRL D  &lhmi LSHFT F  &kp G   &kp LC(LA(LSHFT))  &kp LGUI  &kp GLOBE      &kp GLOBE  &kp RGUI  &kp LA(LC(LSHFT))  &kp H   &rhmi RSHFT J  &rhmm RCTRL K  &rhmr RALT L  &rhmp RGUI SEMI  &caps_word
+&kp LSHFT               &kp Z         &kp X         &kp C          &kp V          &kp B                                &kp LALT       &kp RALT                                &kp N   &kp M          &kp COMMA      &kp DOT       &kp FSLH         &kp RSHIFT
 &mt LA(LC(LGUI)) ENTER  &kp HOME      &kp PG_UP     &kp PG_DN      &kp END                &lt 2 ESC          &kp TAB   &kp LCTRL      &kp RCTRL  &bspc     &sym_tap 1 SPACE           &kp LPAR       &kp LBKT       &kp RBKT      &kp RPAR         &mt LA(LC(LGUI)) ENTER
             >;
         };
@@ -202,7 +202,7 @@
         symbol {
             bindings = <
 &none      &kp CARET  &kp AT     &kp HASH   &kp DLLR   &kp PRCNT  &none                                            &none  &none      &none      &none        &none      &none     &none
-&kp EXCL   &kp LBRC   &kp LPAR   &kp RPAR   &kp RBRC   &kp BSLH   &none                                            &none  &none      &none      &kp LS(TAB)  &kp EXCL   &none     &none
+&none      &kp LBRC   &kp LPAR   &kp RPAR   &kp RBRC   &kp BSLH   &none                                            &none  &kp EXCL   &none      &kp LS(TAB)  &none      &none     &none
 &kp GRAVE  &kp PIPE   &kp STAR   &kp EQUAL  &kp UNDER  &kp AMPS   &none    &kp PRCNT  &none          &none  &none  &none  &kp QMARK  &kp BSPC   &kp TAB      &kp SPACE  &kp RET   &none
 &none      &kp LT     &kp TILDE  &kp MINUS  &kp GT     &kp SLASH                      &kp COLON      &none                &kp SEMI   &kp COLON  &kp COMMA    &kp DOT    &none     &none
 &trans     &none      &kp LBKT   &kp RBKT   &kp PLUS              &kp SQT  &kp DQT    &kp QMARK      &none  &none  &none             &kp LSHFT  &kp LCTRL    &kp LALT   &kp LGUI  &trans
