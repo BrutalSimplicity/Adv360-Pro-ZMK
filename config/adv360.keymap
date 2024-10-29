@@ -132,13 +132,6 @@
             flavor = "tap-preferred";
         };
 
-        multi_caps: multi_caps {
-            compatible = "zmk,behavior-tap-dance";
-            label = "MULTI_CAPS";
-            #binding-cells = <0>;
-            bindings = <&caps_word>, <&kp CAPSLOCK>;
-        };
-
         bspc_cursor: bspc_cursor {
             compatible = "zmk,behavior-hold-tap";
             label = "BSPC_CURSOR";
@@ -156,20 +149,6 @@
             label = "SELECT_LINE";
         };
 
-        next_win: next_win {
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings =
-                <&kp LGUI>,
-                <&macro_press>,
-                <&kp TAB>,
-                <&macro_tap>,
-                <&kp LGUI &kp TAB>,
-                <&macro_release>;
-
-            label = "NEXT_WIN";
-        };
-
         hm: homerow_mods {
             compatible = "zmk,behavior-hold-tap";
             label = "HOMEROW_MODS";
@@ -178,6 +157,29 @@
             quick_tap_ms = <175>;
             flavor = "tap-preferred";
             bindings = <&kp>, <&kp>;
+        };
+
+        bol: bol {
+            compatible = "zmk,behavior-tap-dance";
+            label = "BOL";
+            #binding-cells = <0>;
+            bindings = <&kp LG(LEFT)>, <&kp HOME>;
+        };
+
+        eol: eol {
+            compatible = "zmk,behavior-tap-dance";
+            label = "EOL";
+            #binding-cells = <0>;
+            bindings = <&kp LG(RIGHT)>, <&kp END>;
+        };
+
+        multi_caps: multi_caps {
+            compatible = "zmk,behavior-hold-tap";
+            label = "MULTI_CAPS";
+            bindings = <&kp>, <&caps_word>;
+
+            #binding-cells = <2>;
+            tapping-term-ms = <200>;
         };
     };
 
@@ -189,11 +191,11 @@
 
         default_layer {
             bindings = <
-&none             &kp N1        &kp N2        &kp N3         &kp N4         &kp N5  &mo 5                                                               &mo 5              &kp N6  &kp N7         &kp N8         &kp N9        &kp N0           &none
-&kp TAB           &kp Q         &kp W         &kp E          &kp R          &kp T   &none                                                               &none              &kp Y   &kp U          &kp I          &kp O         &kp P            &multi_caps
-&kp ESC           &lhmp LGUI A  &lhmr LALT S  &lhmm LCTRL D  &lhmi LSHFT F  &kp G   &kp LC(LA(LSHFT))  &kp LGUI     &kp GLOBE      &kp GLOBE  &kp RGUI  &kp LA(LC(LSHFT))  &kp H   &rhmi RSHFT J  &rhmm RCTRL K  &rhmr RALT L  &rhmp RGUI SEMI  &kp SQT
-&kp LSHFT         &kp Z         &kp X         &kp C          &kp V          &kp B                                   &kp LALT       &kp RALT                                &kp N   &kp M          &kp COMMA      &kp DOT       &kp FSLH         &kp RSHFT
-&kp LA(LC(LGUI))  &kp HOME      &kp PG_UP     &kp PG_DN      &kp END                &lt 2 ESC          &lt 4 ENTER  &kp LCTRL      &kp RCTRL  &bspc     &sym_tap 1 SPACE           &kp LPAR       &kp LBKT       &kp RBKT      &kp RPAR         &kp LA(LC(LGUI))
+&none                   &kp N1        &kp N2        &kp N3         &kp N4         &kp N5  &mo 4                                                            &mo 4              &kp N6  &kp N7         &kp N8         &kp N9        &kp N0           &none
+&kp TAB                 &kp Q         &kp W         &kp E          &kp R          &kp T   &none                                                            &none              &kp Y   &kp U          &kp I          &kp O         &kp P            &kp CAPS
+&kp ESC                 &lhmp LGUI A  &lhmr LALT S  &lhmm LCTRL D  &lhmi LSHFT F  &kp G   &kp LC(LA(LSHFT))  &kp LGUI  &kp GLOBE      &kp GLOBE  &kp RGUI  &kp LA(LC(LSHFT))  &kp H   &rhmi RSHFT J  &rhmm RCTRL K  &rhmr RALT L  &rhmp RGUI SEMI  &kp SQT
+&multi_caps LSHFT 0     &kp Z         &kp X         &kp C          &kp V          &kp B                                &kp LALT       &kp RALT                                &kp N   &kp M          &kp COMMA      &kp DOT       &kp FSLH         &multi_caps RSHFT 0
+&mt LA(LC(LGUI)) ENTER  &kp HOME      &kp PG_UP     &kp PG_DN      &kp END                &lt 2 ESC          &kp TAB   &kp LCTRL      &kp RCTRL  &bspc     &sym_tap 1 SPACE           &kp LPAR       &kp LBKT       &kp RBKT      &kp RPAR         &mt LA(LC(LGUI)) ENTER
             >;
         };
 
@@ -209,11 +211,11 @@
 
         number {
             bindings = <
-&none         &none          &none          &none      &none          &none      &kp LS(LG(N5))                                                 &none            &kp CARET  &kp LPAR   &kp LBKT   &kp RBKT  &kp RPAR   &none
-&select_line  &kp LG(MINUS)  &kp LS(LG(Z))  &kp LG(Z)  &kp LG(PLUS)   &kp LG(X)  &kp LS(LG(NUMBER_4))                                           &none            &kp STAR   &kp N7     &kp N8     &kp N9    &kp MINUS  &kp PRCNT
-&kp LG(A)     &kp ENTER      &kp LA(LEFT)   &kp UP     &kp LA(RIGHT)  &kp LG(C)  &kp LG(LC(LS(N4)))    &none  &none      &kp GLOBE  &kp LGUI    &none            &kp EQUAL  &kp N4     &kp N5     &kp N6    &kp PLUS   &kp DQT
-&none         &none          &kp LEFT       &kp DOWN   &kp RIGHT      &kp LG(V)                               &none      &kp LALT                                &kp N0     &kp N1     &kp N2     &kp N3    &kp SLASH  &kp UNDER
-&trans        &kp LGUI       &kp LALT       &kp LCTRL  &kp LSHFT                 &none                 &none  &none      &kp LCTRL  &lt 3 BSPC  &mt LSHFT SPACE             &kp COLON  &kp COMMA  &kp DOT   &none      &trans
+&none         &none          &none          &none      &none          &none      &kp LG(X)                                           &kp LS(LG(N5))      &kp CARET  &kp LPAR   &kp LBKT   &kp RBKT  &kp RPAR   &none
+&select_line  &kp LG(MINUS)  &kp LS(LG(Z))  &kp LG(Z)  &kp LG(PLUS)   &kp PG_UP  &kp LG(C)                                           &kp LS(LG(N4))      &kp STAR   &kp N7     &kp N8     &kp N9    &kp MINUS  &kp PRCNT
+&kp LG(A)     &kp ENTER      &kp LA(LEFT)   &kp UP     &kp LA(RIGHT)  &kp PG_DN  &kp LG(V)  &none  &none      &kp GLOBE  &kp LGUI    &kp LG(LS(LC(N4)))  &kp EQUAL  &kp N4     &kp N5     &kp N6    &kp PLUS   &kp DQT
+&none         &bol           &kp LEFT       &kp DOWN   &kp RIGHT      &eol                         &none      &kp LALT                                   &kp N0     &kp N1     &kp N2     &kp N3    &kp SLASH  &kp UNDER
+&trans        &kp LGUI       &kp LALT       &kp LCTRL  &kp LSHFT                 &none      &none  &none      &kp LCTRL  &lt 3 BSPC  &mt LSHFT SPACE                &kp COLON  &kp COMMA  &kp DOT   &none      &trans
             >;
         };
 
@@ -224,16 +226,6 @@
 &none  &none  &kp LGUI  &kp LALT  &kp LCTRL  &kp LSHFT  &none  &none  &none      &none  &none  &none  &none  &kp F4   &kp F5   &kp F6   &none  &none
 &none  &none  &none     &none     &none      &none                    &none      &none                &none  &kp F1   &kp F2   &kp F3   &none  &none
 &none  &none  &none     &none     &none                 &none  &none  &none      &none  &none  &none         &none    &none    &none    &none  &none
-            >;
-        };
-
-        cursor {
-            bindings = <
-&trans  &trans    &trans    &trans     &trans     &trans  &trans                                                  &kp LG(X)  &trans    &trans     &trans     &trans     &trans  &trans
-&trans  &trans    &trans    &trans     &trans     &trans  &trans                                                  &kp LG(C)  &trans    &trans     &trans     &trans     &trans  &trans
-&trans  &kp LGUI  &sk LALT  &kp LCTRL  &kp LSHFT  &trans  &trans  &trans  &trans      &kp LG(LS(TAB))  &next_win  &kp LG(V)  &kp LEFT  &kp DOWN   &kp UP     &kp RIGHT  &trans  &trans
-&trans  &none     &trans    &trans     &none      &trans                  &trans      &trans                                 &kp HOME  &kp PG_DN  &kp PG_UP  &kp END    &trans  &trans
-&trans  &trans    &trans    &trans     &trans             &trans  &trans  &trans      &trans           &trans     &trans               &trans     &trans     &trans     &trans  &trans
             >;
         };
 
