@@ -193,7 +193,7 @@
             bindings = <
 &none                  &kp N1        &kp N2        &kp N3         &kp N4         &kp N5  &mo 4                                                                &mo 4              &kp N6  &kp N7         &kp N8         &kp N9        &kp N0           &none
 &kp TAB                &kp Q         &kp W         &kp E          &kp R          &kp T   &none                                                                &none              &kp Y   &kp U          &kp I          &kp O         &kp P            &kp CAPS
-&kp ESC                &lhmp LGUI A  &lhmr LALT S  &lhmm LCTRL D  &lhmi LSHFT F  &kp G   &kp LC(LA(LSHFT))  &mt LGUI TAB  &kp GLOBE      &kp GLOBE  &kp RGUI  &kp LA(LC(LSHFT))  &kp H   &rhmi RSHFT J  &rhmm RCTRL K  &rhmr RALT L  &rhmp RGUI SEMI  &caps_word
+&mt GLOBE ESC          &lhmp LGUI A  &lhmr LALT S  &lhmm LCTRL D  &lhmi LSHFT F  &kp G   &kp LC(LA(LSHFT))  &mt LGUI TAB  &kp GLOBE      &kp GLOBE  &kp RGUI  &kp LA(LC(LSHFT))  &kp H   &rhmi RSHFT J  &rhmm RCTRL K  &rhmr RALT L  &rhmp RGUI SEMI  &caps_word
 &kp LSHFT              &kp Z         &kp X         &kp C          &kp V          &kp B                                    &kp LALT       &kp RALT                                &kp N   &kp M          &kp COMMA      &kp DOT       &kp FSLH         &kp RSHIFT
 &mt LA(LC(LGUI)) LBKT  &kp HOME      &kp END       &kp LEFT       &kp RIGHT              &lt 2 ESC          &kp ENTER     &kp LCTRL      &kp RCTRL  &bspc     &sym_tap 1 SPACE           &kp DOWN       &kp UP         &kp PG_DN     &kp PG_UP        &mt LA(LC(LGUI)) RBKT
             >;
@@ -202,7 +202,7 @@
         symbol {
             bindings = <
 &none      &kp CARET  &kp AT     &kp HASH   &kp DLLR   &kp PRCNT  &none                                            &none  &none      &none      &none        &none      &none     &none
-&kp EXCL   &kp LBRC   &kp LPAR   &kp RPAR   &kp RBRC   &kp BSLH   &none                                            &none  &kp EXCL   &none      &kp LS(TAB)  &none      &none     &none
+&kp EXCL   &kp LBRC   &kp LPAR   &kp RPAR   &kp RBRC   &kp BSLH   &none                                            &none  &none      &none      &kp LS(TAB)  &none      &none     &none
 &kp GRAVE  &kp PIPE   &kp STAR   &kp EQUAL  &kp UNDER  &kp AMPS   &none    &kp PRCNT  &none          &none  &none  &none  &kp QMARK  &kp BSPC   &kp TAB      &kp SPACE  &kp RET   &none
 &none      &kp LT     &kp TILDE  &kp MINUS  &kp GT     &kp SLASH                      &kp COLON      &none                &kp SEMI   &kp COLON  &kp COMMA    &kp DOT    &none     &none
 &trans     &none      &kp LBKT   &kp RBKT   &kp PLUS              &kp SQT  &kp DQT    &kp QMARK      &none  &none  &none             &kp LSHFT  &kp LCTRL    &kp LALT   &kp LGUI  &trans
@@ -211,21 +211,21 @@
 
         number {
             bindings = <
-&none         &none          &none          &none      &none          &none      &kp LG(X)                                               &kp LS(LG(N5))      &kp CARET  &kp LPAR   &kp LBKT   &kp RBKT  &kp RPAR   &none
-&select_line  &kp LG(MINUS)  &kp LS(LG(Z))  &kp LG(Z)  &kp LG(PLUS)   &kp PG_UP  &kp LG(C)                                               &kp LS(LG(N4))      &kp STAR   &kp N7     &kp N8     &kp N9    &kp MINUS  &kp PRCNT
-&kp LG(A)     &kp ENTER      &kp LA(LEFT)   &kp UP     &kp LA(RIGHT)  &kp PG_DN  &kp LG(V)  &none  &none      &kp GLOBE  &mt LGUI PRCNT  &kp LG(LS(LC(N4)))  &kp EQUAL  &kp N4     &kp N5     &kp N6    &kp PLUS   &kp UNDER
-&none         &bol           &kp LEFT       &kp DOWN   &kp RIGHT      &eol                         &none      &kp LALT                                       &kp N0     &kp N1     &kp N2     &kp N3    &kp SLASH  &kp LSHFT
-&trans        &kp LGUI       &kp LALT       &kp LCTRL  &kp LSHFT                 &none      &none  &none      &kp LCTRL  &lt 3 BSPC      &trans                         &kp COLON  &kp COMMA  &kp DOT   &none      &trans
+&none      &none      &none       &none        &none      &none      &kp LG(X)                                           &kp LS(LG(N5))      &kp CARET  &kp LPAR  &kp LBKT  &kp RBKT  &kp RPAR   &none
+&none      &none      &none       &kp LS(TAB)  &none      &none      &kp LG(C)                                           &kp LS(LG(N4))      &kp STAR   &kp N7    &kp N8    &kp N9    &kp MINUS  &none
+&none      &kp ENTER  &kp SPACE   &kp TAB      &kp UNDER  &kp PRCNT  &kp LG(V)  &none  &none      &kp GLOBE  &kp LGUI    &kp LG(LS(LC(N4)))  &kp EQUAL  &kp N4    &kp N5    &kp N6    &kp PLUS   &none
+&none      &none      &kp PERIOD  &kp COMMA    &kp COLON  &none                        &none      &kp LALT                                   &none      &kp N1    &kp N2    &kp N3    &kp SLASH  &kp LSHFT
+&kp GLOBE  &kp LGUI   &kp LALT    &kp LCTRL    &kp LSHFT             &none      &none  &none      &kp LCTRL  &lt 3 BSPC  &kp N0                         &none     &kp LT    &kp GT    &none      &trans
             >;
         };
 
         fn {
             bindings = <
-&none  &none     &none     &none      &none       &none      &none                                  &none  &none  &kp F10  &kp F11  &kp F12  &none  &none
-&none  &none     &none     &none      &none       &none      &none                                  &none  &none  &kp F7   &kp F8   &kp F9   &none  &none
-&none  &kp LGUI  &kp LALT  &kp LCTRL  &kp LSHIFT  &kp GLOBE  &none  &none  &none      &none  &none  &none  &none  &kp F4   &kp F5   &kp F6   &none  &none
-&none  &none     &none     &none      &none       &none                    &none      &none                &none  &kp F1   &kp F2   &kp F3   &none  &none
-&none  &none     &none     &none      &none                  &none  &none  &none      &none  &none  &none         &none    &none    &none    &none  &none
+&none      &none     &none     &none      &none       &none  &none                                  &none  &none  &kp F10  &kp F11  &kp F12  &none  &none
+&none      &none     &none     &none      &none       &none  &none                                  &none  &none  &kp F7   &kp F8   &kp F9   &none  &none
+&kp GLOBE  &kp LGUI  &kp LALT  &kp LCTRL  &kp LSHIFT  &none  &none  &none  &none      &none  &none  &none  &none  &kp F4   &kp F5   &kp F6   &none  &none
+&none      &none     &none     &none      &none       &none                &none      &none                &none  &kp F1   &kp F2   &kp F3   &none  &none
+&none      &none     &none     &none      &none              &none  &none  &none      &none  &none  &none         &none    &none    &none    &none  &none
             >;
         };
 
